@@ -1,3 +1,4 @@
+\\check readme before run this application
 package emailApplication;
 import java.util.Properties;
 import java.util.Timer;
@@ -14,7 +15,7 @@ public class sendEmail extends TimerTask {
    public static void main(String[] args) throws JSONException, IOException {
 	   Timer t = new Timer();
 	   t.schedule(new sendEmail(), 0, 9000); //send email every 9 seconds
-	   String url = "http://api.weatherapi.com/v1/current.json?key=b1cd077948f44109b7b132357211405&q=London&aqi=no";
+	   String url = "http://api.weatherapi.com/v1/current.json?key=b1cd077948f44109b7b132357211405&q=London&aqi=no";\\here you need to enter key=your generated key from weatherapi
 	   URL obj = new URL(url);
 	   HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 	   BufferedReader in = new BufferedReader(
@@ -25,10 +26,10 @@ public class sendEmail extends TimerTask {
       String to = "test@example.com";
 
       String from = "from@example.com";
-      final String username = "a23bfc9d921b13";
-      final String password = "8a852386313143";
+      final String username = "a23bfc9d921b13";\\ here username from mailtrap
+      final String password = "8a852386313143";\\ here pass from mailtrap
 
-      String host = "smtp.mailtrap.io";
+      String host = "smtp.mailtrap.io";\\ here hostname from mailtrap
 
       Properties props = new Properties();
       props.put("mail.smtp.auth", "true");
